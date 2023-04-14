@@ -1,4 +1,4 @@
-MORSE = {}
+MORSE = {}.freeze
 MORSE = {
   '.-' => 'A',
   '-...' => 'B',
@@ -36,14 +36,14 @@ MORSE = {
   '--...' => '7',
   '---..' => '8',
   '----.' => '9'
-}
+}.freeze
 
 def decodeChar(randomChar)
   MORSE[randomChar]
 end
 
 def decodeWord(randomChar)
-  randomChar.split(' ').map { |string| decodeChar string }.join
+  randomChar.split.map { |string| decodeChar string }.join
 end
 
 def decodeSentence(randomChar)
