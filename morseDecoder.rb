@@ -1,5 +1,5 @@
-library = Hash.new
-library = {
+MORSE = Hash.new
+MORSE = {
   '.-'=>'A',
   '-...'=>'B',
   '-.-.'=>'C',
@@ -37,3 +37,19 @@ library = {
   '---..'=>'8',
   '----.'=>'9'
 }
+
+def decodeChar (randomChar)
+  puts MORSE[randomChar]
+end
+
+def decodeWord (randomChar)
+  return randomChar.split(" ").map { |string| MORSE[string] }.join('')
+end
+
+def decodeSentence (randomChar)
+  words = randomChar.split("   ")
+  puts words.map {|word| decodeWord word}.join(" ")
+  
+end
+
+decodeSentence ' .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
