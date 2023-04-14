@@ -38,17 +38,17 @@ MORSE = {
   '----.' => '9'
 }.freeze
 
-def decodeChar(randomChar)
+def decode_char(randomChar)
   MORSE[randomChar]
 end
 
-def decodeWord(randomChar)
-  randomChar.split.map { |string| decodeChar string }.join
+def decode_word(randomChar)
+  randomChar.split.map { |string| decode_char string }.join
 end
 
-def decodeSentence(randomChar)
+def decode_sentence(randomChar)
   words = randomChar.split('   ')
-  puts words.map { |word| decodeWord word }.join(' ')
+  puts words.map { |word| decode_word word }.join(' ')
 end
 
-decodeSentence ' .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
+decode_sentence ' .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
