@@ -1,4 +1,3 @@
-MORSE = {}.freeze
 MORSE = {
   '.-' => 'A',
   '-...' => 'B',
