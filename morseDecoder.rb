@@ -39,11 +39,11 @@ MORSE = {
 }
 
 def decodeChar (randomChar)
-  puts MORSE[randomChar]
+  MORSE[randomChar]
 end
 
 def decodeWord (randomChar)
-  return randomChar.split(" ").map { |string| MORSE[string] }.join('')
+  return randomChar.split(" ").map { |string| decodeChar string }.join
 end
 
 def decodeSentence (randomChar)
