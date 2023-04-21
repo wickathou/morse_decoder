@@ -46,7 +46,8 @@ def decode_word(random_char)
 end
 
 def decode_sentence(random_char)
-  words = random_char.split('   ')
+  words = random_cha.split('   ')
+  binding.pry
   puts words.map { |word| decode_word word }.join(' ')
 end
 
