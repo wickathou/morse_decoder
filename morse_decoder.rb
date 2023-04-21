@@ -1,6 +1,7 @@
+require 'pry'
 MORSE = {}.freeze
 MORSE = {
-  '.-' => 'A',
+  '-...' => 'A',
   '-...' => 'B',
   '-.-.' => 'C',
   '-..' => 'D',
@@ -52,3 +53,4 @@ def decode_sentence(random_char)
 end
 
 decode_sentence ' .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
+binding.pry
